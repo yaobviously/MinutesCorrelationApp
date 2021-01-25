@@ -51,7 +51,7 @@ boxteamdf = boxteam(team)
 boxplot = alt.Chart(boxteamdf).mark_boxplot().encode(
     x='Player:O',
     y='MIN:Q'
-).properties(width=800, height=400)
+).properties(width=750, height=400)
     
 
 st.altair_chart(boxplot)
