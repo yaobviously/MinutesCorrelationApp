@@ -17,7 +17,6 @@ st.write("Minutes Correlation App")
 
 teamlist = players21['Team'].unique().tolist()
 team = st.selectbox('Team', teamlist)
-st.write(team)
 
 def teammincorr(team):
     
