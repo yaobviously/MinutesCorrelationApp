@@ -21,10 +21,6 @@ st.write("Minutes Correlation App")
 teamlist = players21['Team'].unique().tolist()
 team = st.selectbox('Team', teamlist)
 
-d = st.date_input(
-        'Date', 
-         datetime.date(2020, 12, 22))
-
 def teammincorr(team):
     
     mintable = players21.loc[(players21['Team'] == team) & (players21['MPG'] >=16) & (players21['MIN'] >= 2)][['GameID', 'Player', 'MIN']]
