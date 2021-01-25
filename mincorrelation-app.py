@@ -54,5 +54,5 @@ boxplot = alt.Chart(boxteamdf).mark_boxplot().encode(
 )
     
 
-st.write(boxplot)
+st.altair_chart(boxplot)
 
