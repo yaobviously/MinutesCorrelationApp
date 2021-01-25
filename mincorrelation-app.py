@@ -29,11 +29,7 @@ def teammincorr(team):
 X = teammincorr(team)
 
 def color_negative_red(val):
-    """
-    Takes a scalar and returns a string with
-    the css property `'color: red'` for negative
-    strings, black otherwise.
-    """
+   
     color = 'red' if val < 0 else 'green'
     return 'color: %s' % color
 
