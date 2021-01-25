@@ -25,7 +25,7 @@ team = st.selectbox('Team', teamlist)
 
 d = st.date_input('Date', datetime.date(2020, 12, 22))
 
-players21 = players21.sort_index()
+
 newp21 = players21.loc[d:today]
 playerlist = newp21.loc[newp21['Team'] == team][['Player']].unique().tolist()
 
