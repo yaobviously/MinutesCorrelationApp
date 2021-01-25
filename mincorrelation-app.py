@@ -10,12 +10,12 @@ import numpy as np
 
 pd.set_option('precision', 2)
 players21 = pd.read_csv(r'https://github.com/yaobviously/minutesapp/blob/main/boxscoreappdata.csv?raw=true')
-
+players21 = players21.sort_values(by='Team', ascending=True)
 
 st.write("Minutes Correlation App") 
 
 
-teamlist = players21['Team'].unique().sort_values(ascending=True).tolist()
+teamlist = players21['Team'].unique().tolist()
 team = st.selectbox('Team', teamlist)
 st.write(team)
 
