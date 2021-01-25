@@ -10,6 +10,7 @@ import numpy as np
 
 pd.options.display.float_format = "{:,.2f}".format
 players21 = pd.read_csv(r'https://github.com/yaobviously/minutesapp/blob/main/boxscoreappdata.csv?raw=true')
+%precision %.2f
 
 st.write("Minutes Correlation App") 
 
