@@ -36,4 +36,5 @@ def color_negative_red(val):
 
 X = X.style.applymap(color_negative_red)
 
+
 st.write(X)
