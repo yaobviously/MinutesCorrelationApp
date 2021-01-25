@@ -14,11 +14,10 @@ players21 = pd.read_csv(r'https://github.com/yaobviously/minutesapp/blob/main/bo
 
 st.write("Minutes Correlation App") 
 
-defaultteam = 'Toronto'
-teamlist = players21['Team'].unique().tolist()
 
-team = st.text_input('Team', defaultteam)
-test = st.selectbox('Team', teamlist)
+teamlist = players21['Team'].unique().sort_values(ascending=True).tolist()
+team = st.selectbox('Team', teamlist)
+st.write(team)
 
 def teammincorr(team):
     
@@ -41,5 +40,4 @@ def color_negative_red(val):
 
 X = X.style.applymap(color_negative_red)
 
-st.write(test)
 st.table(X)
