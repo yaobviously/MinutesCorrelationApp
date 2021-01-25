@@ -15,14 +15,14 @@ players21 = pd.read_csv(r'https://github.com/yaobviously/minutesapp/blob/main/bo
 st.write("Minutes Correlation App") 
 
 defaultteam = 'Toronto'
-defaultcutoff = 2
+
 
 team = st.text_input('Team', defaultteam)
-cutoff = st.text_input('Minutes Cutoff', defaultcutoff)
 
-def teammincorr(team, cutoff = 2):
+
+def teammincorr(team):
     
-    mintable = players21.loc[(players21['Team'] == team) & (players21['MPG'] >=16) & (players21['MIN'] >= cutoff)][['GameID', 'Player', 'MIN']]
+    mintable = players21.loc[(players21['Team'] == team) & (players21['MPG'] >=16) & (players21['MIN'] >= 2)][['GameID', 'Player', 'MIN']]
     pivottable = (mintable.pivot(index='GameID', columns='Player', values='MIN')).round(2)
     df = pivottable.corr().round(2)
     
