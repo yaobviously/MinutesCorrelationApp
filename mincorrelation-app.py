@@ -16,14 +16,14 @@ players21 = players21.sort_values(by='Team', ascending=True)
 
 st.write("Minutes Correlation App") 
 
-d = st.date_input(
-        'Date', 
-         datetime.date(2020, 12, 22))
 
-st.write(d)
 
 teamlist = players21['Team'].unique().tolist()
 team = st.selectbox('Team', teamlist)
+
+d = st.date_input(
+        'Date', 
+         datetime.date(2020, 12, 22))
 
 def teammincorr(team):
     
