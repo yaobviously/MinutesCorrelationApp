@@ -27,7 +27,7 @@ d = st.date_input(
 
 def teammincorr(team, d):
     
-    mintable = players21.loc[(players21['Team'] == team) & (players21['MPG'] >=16) & (players21['MIN'] >= 2) & (players21['Date'] >= d][['GameID', 'Player', 'MIN']]
+    mintable = players21.loc[(players21['Team'] == team) & (players21['MPG'] >=16) & (players21['MIN'] >= 2) & (players21['Date'] >= d)][['GameID', 'Player', 'MIN']]
     pivottable = (mintable.pivot(index='GameID', columns='Player', values='MIN')).round(2)
     df = pivottable.corr().round(2)
     
