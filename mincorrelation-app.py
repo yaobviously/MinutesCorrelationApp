@@ -8,9 +8,7 @@ import pandas as pd
 import streamlit as st
 import numpy as np
 import altair as alt
-import datetime
 
-today = datatime.date.today()
 pd.set_option('precision', 2)
 players21 = pd.read_csv(r'https://github.com/yaobviously/minutesapp/blob/main/boxscoreappdata.csv?raw=true')
 players21 = players21.sort_values(by='Team', ascending=True)
