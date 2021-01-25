@@ -38,7 +38,7 @@ X = X.style.applymap(color_negative_red)
 
 st.table(X)
 
-st.write('Player Fantasy Points Distributions')
+st.write('Player Minutes Distributions')
 
 def boxteam(team):
     df = players21.loc[(players21['Team'] == team) & (players21['MPG'] >= 16)][['Player', 'MIN', 'PlayerFP']]
