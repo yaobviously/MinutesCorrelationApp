@@ -7,6 +7,7 @@ Created on Sun Jan 24 22:01:45 2021
 import pandas as pd
 import streamlit as st
 import numpy as np
+import altair as alt
 
 pd.set_option('precision', 2)
 players21 = pd.read_csv(r'https://github.com/yaobviously/minutesapp/blob/main/boxscoreappdata.csv?raw=true')
@@ -36,3 +37,22 @@ def color_negative_red(val):
 X = X.style.applymap(color_negative_red)
 
 st.table(X)
+
+st.write('Player Fantasy Points Distributions')
+
+def boxteam(team):
+    df = players21.loc[(players21['Team'] == team) & (players21['MPG'] >= 16)][['MIN', 'PlayerFP']]
+    return df
+    
+boxteamdf = boxteam(team)
+                                                                
+                                                                 
+                                                                
+boxplot = alt.Chart(boxteamdf).mark_boxplot().encode(
+    x='Player:O',
+    y='MIN:Q'
+)
+    
+
+st.write(boxplot)
+
