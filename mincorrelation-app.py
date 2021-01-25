@@ -30,7 +30,7 @@ playerlist = newp21.loc[newp21['Team'] == team][['Player']].unique().tolist()
 
 def teammincorr(team):
     
-    mintable = players21.loc[(players21['Team'] == team) & (players21['MPG'] >=16) & (players21['MIN'] >= 2 & (players21['Player'].isin(playerlist))][['GameID', 'Player', 'MIN']]
+    mintable = players21.loc[(players21['Team'] == team) & (players21['MPG'] >=16) & (players21['MIN'] >= 2) & (players21['Player'].isin(playerlist))][['GameID', 'Player', 'MIN']]
     
     pivottable = (mintable.pivot(index='GameID', columns='Player', values='MIN')).round(2)
     df = pivottable.corr().round(2)
