@@ -41,7 +41,7 @@ st.table(X)
 st.write('Player Fantasy Points Distributions')
 
 def boxteam(team):
-    df = players21.loc[(players21['Team'] == team) & (players21['MPG'] >= 16)][['MIN', 'PlayerFP']]
+    df = players21.loc[(players21['Team'] == team) & (players21['MPG'] >= 16)][['Player', 'MIN', 'PlayerFP']]
     return df
     
 boxteamdf = boxteam(team)
