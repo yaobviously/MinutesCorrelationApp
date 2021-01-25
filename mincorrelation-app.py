@@ -13,18 +13,17 @@ st.write("Minutes Correlation App")
 
 defaultteam = 'Toronto'
 
-st.header("Select Team")
-
-team = st.text_area('Team', defaultteam, height=100)
+team = st.text_area('Team', defaultteam, height=50)
 
 def teammincorr(team):
     
     mintable = players21.loc[(players21['Team'] == team) & (players21['MPG'] >=16) & (players21['MIN'] >= 15)][['GameID', 'Player', 'MIN']]
     pivottable = (mintable.pivot(index='GameID', columns='Player', values='MIN')).round(2)
-    df = pivottable.corr().round(2)
+    df = pivottable.corr().round(1)
     
-    return df
+    return df.round(1)
 
 X = teammincorr(team)
+X = X.style.applymap(color_negative_red)
 
 st.write(X)
