@@ -54,5 +54,5 @@ boxplot = alt.Chart(boxteamdf).mark_boxplot().encode(
 )
     
 
-st.write(boxteamdf)
+st.write(boxplot)
 
