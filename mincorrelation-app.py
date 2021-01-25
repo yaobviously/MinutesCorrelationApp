@@ -16,7 +16,7 @@ st.write("Minutes Correlation App")
 
 defaultteam = 'Toronto'
 
-team = st.text_area('Team', defaultteam, height=50)
+team = st.text_area('Team', defaultteam)
 
 def teammincorr(team):
     
