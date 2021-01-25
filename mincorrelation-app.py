@@ -21,7 +21,7 @@ def teammincorr(team):
     pivottable = (mintable.pivot(index='GameID', columns='Player', values='MIN')).round(2)
     df = pivottable.corr().round(1)
     
-    return df.round(1)
+    return df 
 
 X = teammincorr(team)
 
