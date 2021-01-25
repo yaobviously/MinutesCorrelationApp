@@ -7,6 +7,7 @@ Created on Sun Jan 24 22:01:45 2021
 import pandas as pd
 import streamlit as st
 
+pd.options.display.float_format = "{:,.2f}".format
 players21 = pd.read_csv(r'https://github.com/yaobviously/minutesapp/blob/main/boxscoreappdata.csv?raw=true')
 
 st.write("Minutes Correlation App") 
