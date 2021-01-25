@@ -15,6 +15,8 @@ players21 = players21.sort_values(by='Team', ascending=True)
 
 st.write("Minutes Correlation App") 
 
+date = st.date_input('Date', 
+                     datetime.date(2020, 12, 22))
 
 teamlist = players21['Team'].unique().tolist()
 team = st.selectbox('Team', teamlist)
