@@ -5,7 +5,6 @@ Created on Sun Jan 24 22:01:45 2021
 @author: yaobv
 """
 import pandas as pd
-import numpy as np
 import streamlit as st
 
 players21 = pd.read_csv(r'https://github.com/yaobviously/minutesapp/blob/main/boxscoreappdata.csv?raw=true')
