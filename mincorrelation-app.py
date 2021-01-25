@@ -23,7 +23,7 @@ st.write("Minutes Correlation App")
 teamlist = players21['Team'].unique().tolist()
 team = st.selectbox('Team', teamlist)
 
-d = st.date_input('Date', datetime.date(2020, 12, 21))
+d = st.date_input('Date', datetime.date(2020, 12, 22))
 
 
 newp21 = players21.loc[d:today]
