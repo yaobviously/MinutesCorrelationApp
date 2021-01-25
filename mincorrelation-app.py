@@ -19,7 +19,7 @@ def teammincorr(team):
     
     mintable = players21.loc[(players21['Team'] == team) & (players21['MPG'] >=16) & (players21['MIN'] >= 15)][['GameID', 'Player', 'MIN']]
     pivottable = (mintable.pivot(index='GameID', columns='Player', values='MIN')).round(2)
-    df = pivottable.corr().round(1)
+    df = pivottable.corr().round(2)
     
     return df 
 
@@ -31,7 +31,7 @@ def color_negative_red(val):
     the css property `'color: red'` for negative
     strings, black otherwise.
     """
-    color = 'red' if val < 0 else 'black'
+    color = 'red' if val < 0 else 'green'
     return 'color: %s' % color
 
 X = X.style.applymap(color_negative_red)
