@@ -8,9 +8,9 @@ import pandas as pd
 import streamlit as st
 import numpy as np
 
-pd.options.display.float_format = "{:,.2f}".format
+pd.set_option('precision', 2)
 players21 = pd.read_csv(r'https://github.com/yaobviously/minutesapp/blob/main/boxscoreappdata.csv?raw=true')
-%precision %.2f
+
 
 st.write("Minutes Correlation App") 
 
