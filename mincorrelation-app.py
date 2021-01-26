@@ -17,7 +17,7 @@ players21 = pd.read_csv(r'https://github.com/yaobviously/minutesapp/blob/main/bo
 players21 = players21.sort_values(by='Team', ascending=True)
 players21['Date'] = pd.to_datetime(players21['Date'])
 
-st.write("Minutes Correlation App") 
+st.write("Minutes Correlations") 
 
 
 
