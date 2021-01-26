@@ -25,7 +25,7 @@ team = st.selectbox('Team', teamlist)
 
 today = pd.Timestamp(datetime.date.today())
 
-mask = (players21['Date'] > today) & (players21['Team'] == team)
+mask = (players21['Date'] < today) & (players21['Team'] == team)
 
 plistdf = players21[mask]
 
