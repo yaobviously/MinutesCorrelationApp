@@ -24,7 +24,7 @@ teamlist = players21['Team'].unique().tolist()
 team = st.selectbox('Team', teamlist)
 
 today = pd.Timestamp(datetime.date.today())
-earlier = pd.TimeStamp(datetime.date.today() - timedelta(days=3))
+earlier = pd.Timestamp(datetime.date.today() - timedelta(days=3))
                        
 mask = (players21['Date'] > earlier) & (players21['Date'] < today) & (players21['Team'] == team)
 
