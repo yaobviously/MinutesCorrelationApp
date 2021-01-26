@@ -24,8 +24,8 @@ st.write("Minutes Correlation App")
 teamlist = players21['Team'].unique().tolist()
 team = st.selectbox('Team', teamlist)
 
-today = pd.Timestamp(datetime.date.today())
-earlier = pd.Timestamp(datetime.date.today() - timedelta(days=3))
+today = pd.Timestamp(datetime.today())
+earlier = pd.Timestamp(datetime.today() - timedelta(days=3))
                        
 mask = (players21['Date'] > earlier) & (players21['Date'] < today) & (players21['Team'] == team)
 
