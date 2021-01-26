@@ -22,6 +22,8 @@ st.write("Minutes Correlation App")
 
 
 teamlist = players21['Team'].unique().tolist()
+
+st.sidebar.header('Select Team')
 team = st.sidebar.selectbox('Team', teamlist)
 
 today = pd.Timestamp(datetime.today())
