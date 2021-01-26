@@ -14,7 +14,7 @@ import datetime
 pd.set_option('precision', 2)
 players21 = pd.read_csv(r'https://github.com/yaobviously/minutesapp/blob/main/boxscoreappdata.csv?raw=true')
 players21 = players21.sort_values(by='Team', ascending=True)
-players21['Date'] = pd.Timestamp(players21['Date'])
+players21['Date'] = pd.to_datetime(players21['Date'])
 
 st.write("Minutes Correlation App") 
 
