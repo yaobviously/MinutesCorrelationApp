@@ -22,7 +22,7 @@ st.write("Minutes Correlation App")
 
 
 teamlist = players21['Team'].unique().tolist()
-team = st.selectbox('Team', teamlist)
+team = st.sidebar.selectbox('Team', teamlist)
 
 today = pd.Timestamp(datetime.today())
 earlier = pd.Timestamp(datetime.today() - timedelta(days=7))
