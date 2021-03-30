@@ -1,3 +1,4 @@
-# minutesapp
+# Minutes App
 
-This app will display minutes data for NBA players.
+This app display the correlations for minutes played for the players on each NBA team.
+
