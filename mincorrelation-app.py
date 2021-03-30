@@ -26,6 +26,9 @@ teamlist = players21['Team'].unique().tolist()
 st.sidebar.header('Select Team')
 team = st.sidebar.selectbox('Team', teamlist)
 
+# The code below excludes players that haven't played in recent games. It does so because the app 
+# was originally built to aid decision-making in NBA Daily Fantasy.
+
 today = pd.Timestamp(datetime.today())
 earlier = pd.Timestamp(datetime.today() - timedelta(days=7))
                        
